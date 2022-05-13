@@ -34,6 +34,8 @@ class Movie {
     double voteAverage;
     int voteCount;
 
+    String? heroid;
+
 
     // GETTER del path de las img
     get fullPosterImg{
@@ -43,6 +45,15 @@ class Movie {
         return 'https://i.stack.imgur.com/GNhx0.png';
       }
     }
+
+    get fullBackPosterImg{
+      if(this.backdropPath != null){
+          return 'https://image.tmdb.org/t/p/w500${ this.backdropPath }';
+      }else{
+        return 'https://i.stack.imgur.com/GNhx0.png';
+      }
+    }
+
 
     factory Movie.fromJson(String str) => Movie.fromMap(json.decode(str));
 
