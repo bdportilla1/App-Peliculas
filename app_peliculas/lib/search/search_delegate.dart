@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 class MovieSearhDelegate extends SearchDelegate{
 
   @override
-  // TODO: implement searchFieldLabel
   String get searchFieldLabel => 'Busca tu película';
   
 
